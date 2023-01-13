@@ -1,3 +1,5 @@
+import java.rmi.StubNotFoundException;
+
 public class Student{
 
     private final String name;

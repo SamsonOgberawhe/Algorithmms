@@ -2,12 +2,25 @@ public class Main2 {
     public static void main(String[] args) {
         System.out.println("This is a new algorithm");
 
-       long pid = ProcessHandle.current().pid();
-        System.out.println("The pid is " + pid);
+        Athread athread = new Athread();
 
-       long mem =  (Runtime.getRuntime().totalMemory()) / 1000000;
-        System.out.println("KB: " + mem);
+        Thread thread = new Thread(athread);
+        thread.setPriority(Thread.MAX_PRIORITY);
 
+        for(int i = 0; i < 5; i++ ){
+            thread.start();
+        }
+      //How to start garbage collection
+        System.gc();
+        Runtime.getRuntime().gc();
 
+    }
+
+    public int sumTwoNumbers(int a, int b){
+        return a + b;
+    }
+
+    public int subtractTwoNumbers(int a, int b){
+        return a > b? a - b: b-a;
     }
 }
