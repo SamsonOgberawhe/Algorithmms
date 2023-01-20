@@ -1,3 +1,5 @@
+package Arrays;
+
 import java.util.Arrays;
 
 public class MultidimentionalArrays {
@@ -51,6 +53,13 @@ public class MultidimentionalArrays {
                 }
         };
         System.out.println("Three D arrays: \n" + Arrays.deepToString(threeDArrays));
+        for(int i = 0; i < threeDArrays.length; i++){
+            for(int j =0; j < threeDArrays.length; j++){
+                for(int k = 0; k < threeDArrays.length; k++){
+                    System.out.println(threeDArrays[i][j][k]);
+                }
+            }
+        }
 
         // 4D Arrays
         int[][][][] fourDArrays = {
@@ -82,6 +91,15 @@ public class MultidimentionalArrays {
 
         System.out.println("Four D arrays: \n" + Arrays.deepToString(fourDArrays));
 
+        for(int i = 0; i < fourDArrays.length; i++){
+            for(int j = 0; j < fourDArrays.length; j++){
+                for(int k = 0; k < fourDArrays.length; k++){
+                  for(int l = 0; l < fourDArrays.length; l++)  {
+                        System.out.println(fourDArrays[i][j][k][l]);
+                    }
+                }
+            }
+        }
 
 
     }

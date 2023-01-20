@@ -8,6 +8,7 @@ public class Main {
     public static void main(String[] args) {
 
         String[] strings = new String[10];
+        String[] strings1 = new String[20];
         System.out.println(strings[9]);
 
 
