@@ -1,7 +1,6 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class ArrayAlgo {
     public static void main(String[] args) {
@@ -12,6 +11,26 @@ public class ArrayAlgo {
 
         System.out.println("IntegerList is " + integerList);
         int[] array = {55, 33, 76, 92, 81, 75, 21, 32, 11, 11, 11};
+        int[] array2 = {4, 5, 44, 55, 66};
+
+        int max = Arrays.stream(array).max().getAsInt();
+
+        int[] concat= new int[array.length + array2.length];
+        int index =0;
+        for(int num: array){
+            concat[index] = num;
+            index++;
+        }
+        for(int num: array2){
+            concat[index] = num;
+            index++;
+        }
+        System.out.println(Arrays.toString(concat));
+
+
+        System.out.println("The newest Array " +Arrays.toString(concat));
+
+        System.out.println("Maximums is " + max);
 //        System.out.println(getMinValue(array));
 //        System.out.println(getMaxValue(array));
 ////        System.out.println("New array is " + java.util.Arrays.toString(removeIndex(array, 3)));
@@ -136,4 +155,12 @@ public class ArrayAlgo {
     public static List<Integer> getNumbersGreaterThanFour(List<Integer> integerList){
         return integerList.stream().filter(i -> i > 4).sorted().collect(Collectors.toList());
     }
+//    static int[] removeDuplicates(int[] arr){
+//    Set<Integer> set = new HashSet<Integer>();
+//        for(int i = 0; i< arr.length; i++){
+//            set.add(arr[i]);
+//        }
+//        return set.toArray();
+//
+//    }
 }

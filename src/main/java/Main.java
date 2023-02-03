@@ -7,6 +7,11 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
+        int num = 55;
+        int num2 = 66;
+
+        int nn = num2;
+
         String[] strings = new String[10];
         String[] strings1 = new String[20];
         System.out.println(strings[9]);
@@ -34,6 +39,13 @@ int u =0;
         System.out.println(getList(stringList));
         System.out.println(getNewList(stringList));
 
+
+        int[] arry = new int[5];
+
+        for( int m=0; m< arry.length; m++){
+            arr[m] = 5;
+        }
+
     }
     public static int getList(List<String> stringList){
         List<String> newList = new ArrayList<>();
@@ -57,4 +69,6 @@ int u =0;
     public static String printMoney(String money){
         return "";
     }
+
+
 }

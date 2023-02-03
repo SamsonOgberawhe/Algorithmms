@@ -17,19 +17,17 @@ public class LinkedList {
 
         public void addNode(int data){
             Node newNode = new Node(data);
-
             if(head == null){
-
                 head = newNode;
-                tail = newNode;
-
-            }else{
+            } else{
                 tail.next = newNode;
                 tail = newNode;
             }
 
         }
+
    }
+
 
    // write a method to reverse a linkedList
     public static void reverseLinkedList(Node head){

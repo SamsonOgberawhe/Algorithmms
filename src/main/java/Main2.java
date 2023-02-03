@@ -2,6 +2,9 @@ public class Main2 {
     public static void main(String[] args) {
         System.out.println("This is a new algorithm");
 
+        int one = 33;
+        System.out.println("The hashcode is... " + Integer.hashCode(one));
+
         Athread athread = new Athread();
 
         Thread thread = new Thread(athread);
