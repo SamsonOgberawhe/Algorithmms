@@ -1,7 +1,9 @@
 import java.rmi.StubNotFoundException;
 
+
 public class Student{
 
+    @CustomInterface
     private final String name;
     private final int score;
     private final String description;
@@ -18,6 +20,7 @@ public class Student{
 ;       private String description = "NOT_PROVIDED";
 
 
+        public Builder setName(String name){return this;}
         public Builder setScore(int score){
             return this;
         }

@@ -9,7 +9,6 @@ public class Main {
 
         int num = 55;
         int num2 = 66;
-
         int nn = num2;
 
         String[] strings = new String[10];

@@ -11,6 +11,8 @@ public class Main3 {
     public static void main(String[] args) {
 
         Optional<String> stringOptional = Optional.of("Student");
+        String word = "racer";
+        System.out.println("The reversed word is: "+palindrome2(word));
 
         int[] array = {3, 4, 5, 6, 7, 8, 9, 10};
         int[] array2 = {3, 5, 2, 7, 1, 99, 66, 32};
@@ -55,6 +57,21 @@ public class Main3 {
                 }
             }
         }
+    }
+    static String palindrome(String word){
+        StringBuilder newString = new StringBuilder();
+        char[] chars = word.toCharArray();
+        for(int i =chars.length-1; i>=0; i--){
+            newString.append(chars[i]);
+        }
+        return newString.toString().equals(word) ? "It is a palindrome" : "It is not a palindrome";
+    }
+
+    static boolean palindrome2(String word){
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(word);
+//        System.out.println("The reversed is: " + stringBuilder.reverse());
+        return stringBuilder.reverse().toString().equals(word);
     }
 }
 
